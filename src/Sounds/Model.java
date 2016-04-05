@@ -26,7 +26,7 @@ public class Model {
       ContinuousAudioDataStream loop = null;
       
       try{
-      BGM = new AudioStream(new FileInputStream ("lady_gaga-bad_romance.mid"));
+      BGM = new AudioStream(new FileInputStream ("Convulsions.ogg"));
       Data = BGM.getData();
       loop = new ContinuousAudioDataStream(Data);
       }
