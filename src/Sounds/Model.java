@@ -11,7 +11,7 @@ import java.io.IOException;
 import sun.audio.AudioData;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
-import sun.audio.ContinuousAudioDataStream;
+import sun.audio.*;
 
 /**
  *
@@ -21,20 +21,17 @@ public class Model {
     
     public void music(){
       AudioPlayer Play = AudioPlayer.player;
-      AudioStream BGM;
+      AudioStream click;
       AudioData Data;
-      ContinuousAudioDataStream loop = null;
       
       try{
-      BGM = new AudioStream(new FileInputStream ("Convulsions.ogg"));
-      Data = BGM.getData();
-      loop = new ContinuousAudioDataStream(Data);
+      click = new AudioStream(new FileInputStream ("src\\music\\button.wav"));
+      Data = click.getData();
       }
-    catch(IOException Error){
-    System.out.print("music not found");
-    }
+      catch(IOException Error){
+      System.out.print("music not found. ");
+      }
     
-    Play.start(loop);
 
 }
 }

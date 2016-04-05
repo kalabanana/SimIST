@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
  *
  * @author Qiu
  */
-public class Controller {
+public class Controller{
     private Model model;
     private View view;
     private ActionListener actionListener;
@@ -26,8 +26,10 @@ public class Controller {
         actionListener = new ActionListener(){
             public void actionPerformed(ActionEvent ae) {
                 onClick();
+                System.out.println("clicked");
             }
         };
+        view.getButton().addActionListener(actionListener);
     }
     private void onClick(){
         model.music();

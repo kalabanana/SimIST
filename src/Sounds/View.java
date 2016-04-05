@@ -6,6 +6,8 @@
 package Sounds;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -30,7 +32,9 @@ public class View {
         frame.getContentPane().add(label,BorderLayout.CENTER);
         button = new JButton ("Click");
         frame.getContentPane().add(button, BorderLayout.SOUTH);
-    }
+
+    }        
+    
     public JButton getButton(){
         return button;
     }
