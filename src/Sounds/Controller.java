@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package Sounds;
-
+import sun.audio.*;
+import java.io.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -29,7 +30,25 @@ public class Controller {
         };
     }
     private void onClick(){
-        
+        music();
+    }
+    public static void music(){
+      AudioPlayer Play = AudioPlayer.player;
+      AudioStream BGM;
+      AudioData Data;
+      ContinuousAudioDataStream loop = null;
+      
+      try{
+      BGM = new AudioStream(new FileInputStream ("lady_gaga-bad_romance.mid"));
+      Data = BGM.getData();
+      loop = new ContinuousAudioDataStream(Data);
+      }
+    catch(IOException Error){
+    System.out.print("music not found");
     }
     
+    Play.start(loop);
+
 }
+}
+
