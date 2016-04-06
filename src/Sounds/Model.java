@@ -6,32 +6,29 @@
 
 package Sounds;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import sun.audio.AudioData;
-import sun.audio.AudioPlayer;
-import sun.audio.AudioStream;
-import sun.audio.*;
-
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 /**
  *
  * @author Qiu
  */
 public class Model {
     
-    public void music(){
-      AudioPlayer Play = AudioPlayer.player;
-      AudioStream click;
-      AudioData Data;
-      
+    public void buttonSound(){
+      //Reference: http://stackoverflow.com/questions/10570537/java-no-sound-played-for-button
       try{
-      click = new AudioStream(new FileInputStream ("src\\music\\button.wav"));
-      Data = click.getData();
-      }
-      catch(IOException Error){
-      System.out.print("music not found. ");
-      }
-    
-
+          AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\button.wav"));
+          Clip clip = AudioSystem.getClip( );
+            clip.open(audioInputStream);
+            clip.start( );
+        }
+        catch(Exception e)
+        {
+            System.out.println("Error with playing sound.");
+        }
 }
 }

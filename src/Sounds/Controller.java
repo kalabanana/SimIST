@@ -32,7 +32,7 @@ public class Controller{
         view.getButton().addActionListener(actionListener);
     }
     private void onClick(){
-        model.music();
+        model.buttonSound();
     }
     
 }
