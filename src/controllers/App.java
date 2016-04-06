@@ -29,6 +29,7 @@ public class App {
                 View view = new View("Sample");
                 Controller controller = new Controller(model, view);
                 controller.control();
+                model.playBGM();
             }
             
         });

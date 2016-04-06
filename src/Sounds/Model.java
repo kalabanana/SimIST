@@ -22,6 +22,7 @@ public class Model {
       //Reference: http://stackoverflow.com/questions/10570537/java-no-sound-played-for-button
       try{
           AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\button.wav"));
+          //R: http://opengameart.org/content/forward-button-press-ui-sound
           Clip clip = AudioSystem.getClip( );
             clip.open(audioInputStream);
             clip.start( );
@@ -30,5 +31,22 @@ public class Model {
         {
             System.out.println("Error with playing sound.");
         }
-}
+    }
+    
+        public void playBGM(){
+      //Reference: http://stackoverflow.com/questions/10570537/java-no-sound-played-for-button
+        try{
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\op.wav"));
+            //R: http://opengameart.org/content/introduction-gm-version
+            Clip clip = AudioSystem.getClip( );
+            clip.open(audioInputStream);
+            clip.start( );
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+            
+        }
+        catch(Exception e)
+        {
+            System.out.println("Error with playing sound.");
+        }
+    }
 }
