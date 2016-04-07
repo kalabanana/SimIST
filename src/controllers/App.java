@@ -29,7 +29,9 @@ public class App {
                 View view = new View("PROTOTYPE");
                 Controller controller = new Controller(model, view);
                 controller.ButtonControl();
+                
                 model.playBGM();
+                
             }
             
         });

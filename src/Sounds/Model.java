@@ -46,7 +46,10 @@ public class Model {
         }
         catch(Exception e)
         {
-            System.out.println("Error with playing sound.");
+            System.out.println("Error with playing");
         }
     }
+        public void playKeySound(){
+            
+        }
 }
