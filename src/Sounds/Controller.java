@@ -22,7 +22,7 @@ public class Controller{
         this.model = model;
         this.view = view;
     }
-    public void control(){
+    public void ButtonControl(){
         actionListener = new ActionListener(){
             public void actionPerformed(ActionEvent ae) {
                 onClick();

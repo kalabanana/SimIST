@@ -20,6 +20,7 @@ public class View {
     private JFrame frame;
     private JButton button;
     private JLabel label;
+    private JLabel label2;
     
     public View(String text){
         frame = new JFrame("Sample");
@@ -29,7 +30,9 @@ public class View {
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
         label = new JLabel("CLICK the Button!");
-        frame.getContentPane().add(label,BorderLayout.CENTER);
+        frame.getContentPane().add(label,BorderLayout.NORTH);
+        label2 = new JLabel("PRESS the Arrowkeys!");
+        frame.getContentPane().add(label2,BorderLayout.CENTER);
         button = new JButton ("Click");
         frame.getContentPane().add(button, BorderLayout.SOUTH);
 
