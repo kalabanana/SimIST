@@ -49,10 +49,11 @@ public class Model {
 //            System.out.println("Error with playing");
 //        }
 //    }
+    
+        //http://opengameart.org/content/sound-effects-sfx028
         public void playLeftKey(){
           try{
           AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\left.wav"));
-          //R: http://opengameart.org/content/forward-button-press-ui-sound
           Clip clip = AudioSystem.getClip( );
             clip.open(audioInputStream);
             clip.start( );
@@ -65,7 +66,6 @@ public class Model {
         public void playRightKey(){
           try{
           AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\right.wav"));
-          //R: http://opengameart.org/content/forward-button-press-ui-sound
           Clip clip = AudioSystem.getClip( );
             clip.open(audioInputStream);
             clip.start( );
@@ -79,7 +79,6 @@ public class Model {
         public void playUpKey(){
           try{
           AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\up.wav"));
-          //R: http://opengameart.org/content/forward-button-press-ui-sound
           Clip clip = AudioSystem.getClip( );
             clip.open(audioInputStream);
             clip.start( );
@@ -92,7 +91,6 @@ public class Model {
         public void playDownKey(){
           try{
           AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\down.wav"));
-          //R: http://opengameart.org/content/forward-button-press-ui-sound
           Clip clip = AudioSystem.getClip( );
             clip.open(audioInputStream);
             clip.start( );
