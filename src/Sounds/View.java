@@ -34,7 +34,7 @@ public class View implements KeyListener{
         frame.setLocationRelativeTo(null);
         label = new JLabel("CLICK the Button!");
         frame.getContentPane().add(label,BorderLayout.NORTH);
-        label2 = new JLabel("PRESS the Arrowkeys!");
+        label2 = new JLabel("PRESS the Arrow-keys!");
         frame.getContentPane().add(label2,BorderLayout.CENTER);
         button = new JButton ("Click");
         frame.getContentPane().add(button, BorderLayout.SOUTH);
