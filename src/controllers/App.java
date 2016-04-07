@@ -29,9 +29,8 @@ public class App {
                 View view = new View();
                 Controller controller = new Controller(model, view);
                 controller.ButtonControl();
-                model.playDownKey();
                 
-                //model.playBGM();
+                model.playBGM();
                 
                 
             }

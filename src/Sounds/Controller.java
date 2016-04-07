@@ -24,7 +24,7 @@ public class Controller{
     public Controller(Model model, View view){
         this.model = model;
         this.view = view;
-        
+        view.getFrame().addKeyListener(new MyKeyListener());
         
     }
     public void ButtonControl(){
@@ -34,7 +34,7 @@ public class Controller{
             }
         };
         view.getButton().addActionListener(actionListener);
-        view.getFrame().addKeyListener(new MyKeyListener());
+;
 
     }
     private void onClick(){
@@ -57,19 +57,15 @@ public class Controller{
         int i = e.getKeyChar();
         if (i == KeyEvent.VK_RIGHT ) {
             System.out.println("Right pressed.");
-            model.playRightKey();
         } 
         else if (i == KeyEvent.VK_LEFT ) {
             System.out.println("Left pressed.");
-            model.playLeftKey();
         } 
         else if (i == KeyEvent.VK_UP ) {
             System.out.println("Up pressed.");
-            model.playUpKey();
         } 
         else if (i == KeyEvent.VK_DOWN ) {
             System.out.println("Down pressed.");
-            model.playDownKey();
         }
         else{
             System.out.println("Key pressed: " + e.getKeyChar());
@@ -81,15 +77,19 @@ public class Controller{
 
         if (e.getKeyCode() == KeyEvent.VK_RIGHT ) {
             System.out.println("Right released.");
+            model.playRightKey();
         } 
         else if (e.getKeyCode() == KeyEvent.VK_LEFT ) {
             System.out.println("Left released.");
+            model.playLeftKey();
         } 
         else if (e.getKeyCode() == KeyEvent.VK_UP ) {
             System.out.println("Up released.");
+            model.playUpKey();
         } 
         else if (e.getKeyCode() == KeyEvent.VK_DOWN ) {
             System.out.println("Down released.");
+            model.playDownKey();
         }
         else{
             System.out.println("Key released: " + e.getKeyChar());
