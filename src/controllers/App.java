@@ -26,7 +26,7 @@ public class App {
             @Override
             public void run() {
                 Model model = new Model();
-                View view = new View("PROTOTYPE");
+                View view = new View();
                 Controller controller = new Controller(model, view);
                 controller.ButtonControl();
                 

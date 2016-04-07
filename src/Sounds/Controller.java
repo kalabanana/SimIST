@@ -19,6 +19,7 @@ public class Controller{
     private Model model;
     private View view;
     private ActionListener actionListener;
+    public MyKeyListener keylisten;
     
     public Controller(Model model, View view){
         this.model = model;
@@ -28,13 +29,13 @@ public class Controller{
         actionListener = new ActionListener(){
             public void actionPerformed(ActionEvent ae) {
                 onClick();
-                System.out.println("clicked");
             }
         };
         view.getButton().addActionListener(actionListener);
     }
     private void onClick(){
         model.buttonSound();
+        System.out.println("clicked");
     }
     
     //Refrences:http://staticvoidgames.com/tutorials/swing/listeners
@@ -43,37 +44,21 @@ public class Controller{
     @Override
     public void keyTyped(KeyEvent e) {
 
-        if (e.getKeyCode() == KeyEvent.VK_RIGHT ) {
-            
-            System.out.println("Right typed.");
-        } 
-        else if (e.getKeyCode() == KeyEvent.VK_LEFT ) {
-            System.out.println("Left typed.");
-        } 
-        else if (e.getKeyCode() == KeyEvent.VK_UP ) {
-            System.out.println("Up typed.");
-        } 
-        else if (e.getKeyCode() == KeyEvent.VK_DOWN ) {
-            System.out.println("Down typed.");
-        }
-        else{
-            System.out.println("Key typed: " + e.getKeyChar());
-        }
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-
-        if (e.getKeyCode() == KeyEvent.VK_RIGHT ) {
+        int i = e.getKeyChar();
+        if (i == KeyEvent.VK_RIGHT ) {
             System.out.println("Right pressed.");
         } 
-        else if (e.getKeyCode() == KeyEvent.VK_LEFT ) {
+        else if (i == KeyEvent.VK_LEFT ) {
             System.out.println("Left pressed.");
         } 
-        else if (e.getKeyCode() == KeyEvent.VK_UP ) {
+        else if (i == KeyEvent.VK_UP ) {
             System.out.println("Up pressed.");
         } 
-        else if (e.getKeyCode() == KeyEvent.VK_DOWN ) {
+        else if (i == KeyEvent.VK_DOWN ) {
             System.out.println("Down pressed.");
         }
         else{
@@ -99,9 +84,7 @@ public class Controller{
         else{
             System.out.println("Key released: " + e.getKeyChar());
         }
-    }
-
-      
+    }   
     }
 }
 
