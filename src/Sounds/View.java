@@ -18,7 +18,7 @@ import javax.swing.JLabel;
  *
  * @author Qiu
  */
-public class View implements KeyListener{
+public class View {
     private JFrame frame;
     private JButton button;
     private JLabel label;
@@ -31,6 +31,7 @@ public class View implements KeyListener{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(150,150);
         frame.setVisible(true);
+        frame.setFocusable(true);
         frame.setLocationRelativeTo(null);
         label = new JLabel("CLICK the Button!");
         frame.getContentPane().add(label,BorderLayout.NORTH);
@@ -38,23 +39,12 @@ public class View implements KeyListener{
         frame.getContentPane().add(label2,BorderLayout.CENTER);
         button = new JButton ("Click");
         frame.getContentPane().add(button, BorderLayout.SOUTH);
-        
-        frame.addKeyListener(this);
     }        
     
     public JButton getButton(){
         return button;
     }
-    
-    public void keyTyped(KeyEvent ke) {
-        
-    }
-    
-    public void keyPressed(KeyEvent ke) {
-        control.keylisten.keyPressed(ke);
-    }
-
-    public void keyReleased(KeyEvent ke) {
-        control.keylisten.keyReleased(ke);
+    public JFrame getFrame(){
+        return frame;
     }
 }

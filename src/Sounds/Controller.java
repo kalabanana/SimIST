@@ -24,6 +24,8 @@ public class Controller{
     public Controller(Model model, View view){
         this.model = model;
         this.view = view;
+        
+        
     }
     public void ButtonControl(){
         actionListener = new ActionListener(){
@@ -32,11 +34,15 @@ public class Controller{
             }
         };
         view.getButton().addActionListener(actionListener);
+        view.getFrame().addKeyListener(new MyKeyListener());
+
     }
     private void onClick(){
         model.buttonSound();
         System.out.println("clicked");
     }
+    
+    
     
     //Refrences:http://staticvoidgames.com/tutorials/swing/listeners
     public class MyKeyListener implements KeyListener{
@@ -51,15 +57,19 @@ public class Controller{
         int i = e.getKeyChar();
         if (i == KeyEvent.VK_RIGHT ) {
             System.out.println("Right pressed.");
+            model.playRightKey();
         } 
         else if (i == KeyEvent.VK_LEFT ) {
             System.out.println("Left pressed.");
+            model.playLeftKey();
         } 
         else if (i == KeyEvent.VK_UP ) {
             System.out.println("Up pressed.");
+            model.playUpKey();
         } 
         else if (i == KeyEvent.VK_DOWN ) {
             System.out.println("Down pressed.");
+            model.playDownKey();
         }
         else{
             System.out.println("Key pressed: " + e.getKeyChar());

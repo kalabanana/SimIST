@@ -33,23 +33,73 @@ public class Model {
         }
     }
     
-        public void playBGM(){
-      //Reference: http://stackoverflow.com/questions/10570537/java-no-sound-played-for-button
-        try{
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\op.wav"));
-            //R: http://opengameart.org/content/introduction-gm-version
-            Clip clip = AudioSystem.getClip( );
+//        public void playBGM(){
+//      //Reference: http://stackoverflow.com/questions/10570537/java-no-sound-played-for-button
+//        try{
+//            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\op.wav"));
+//            //R: http://opengameart.org/content/introduction-gm-version
+//            Clip clip = AudioSystem.getClip( );
+//            clip.open(audioInputStream);
+//            clip.start( );
+//            clip.loop(Clip.LOOP_CONTINUOUSLY);
+//            
+//        }
+//        catch(Exception e)
+//        {
+//            System.out.println("Error with playing");
+//        }
+//    }
+        public void playLeftKey(){
+          try{
+          AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\left.wav"));
+          //R: http://opengameart.org/content/forward-button-press-ui-sound
+          Clip clip = AudioSystem.getClip( );
             clip.open(audioInputStream);
             clip.start( );
-            clip.loop(Clip.LOOP_CONTINUOUSLY);
-            
         }
         catch(Exception e)
         {
-            System.out.println("Error with playing");
+            System.out.println("Error with playing sound.");
+        } 
         }
-    }
-        public void playKeySound(){
-            
+        public void playRightKey(){
+          try{
+          AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\right.wav"));
+          //R: http://opengameart.org/content/forward-button-press-ui-sound
+          Clip clip = AudioSystem.getClip( );
+            clip.open(audioInputStream);
+            clip.start( );
+        }
+        catch(Exception e)
+        {
+            System.out.println("Error with playing sound.");
+        } 
+        }
+        
+        public void playUpKey(){
+          try{
+          AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\up.wav"));
+          //R: http://opengameart.org/content/forward-button-press-ui-sound
+          Clip clip = AudioSystem.getClip( );
+            clip.open(audioInputStream);
+            clip.start( );
+        }
+        catch(Exception e)
+        {
+            System.out.println("Error with playing sound.");
+        } 
+        }
+        public void playDownKey(){
+          try{
+          AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\down.wav"));
+          //R: http://opengameart.org/content/forward-button-press-ui-sound
+          Clip clip = AudioSystem.getClip( );
+            clip.open(audioInputStream);
+            clip.start( );
+        }
+        catch(Exception e)
+        {
+            System.out.println("Error with playing sound.");
+        } 
         }
 }
