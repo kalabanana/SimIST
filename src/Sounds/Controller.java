@@ -34,12 +34,12 @@ public class Controller{
             }
         };
         view.getButton().addActionListener(actionListener);
-;
 
     }
     private void onClick(){
         model.buttonSound();
         System.out.println("clicked");
+        view.getFrame().requestFocus();
     }
     
     
