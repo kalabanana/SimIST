@@ -17,6 +17,7 @@ public class CharacterMovement implements KeyListener {
     private String facing = "";
     private int stationFound;
     private ArrayList<Rectangle> stations = new ArrayList<>();
+    private ArrayList<Rectangle> room206items = new ArrayList<>();
     private boolean isInteracting = false;
     private int oldX;
     private int oldY;
@@ -135,6 +136,16 @@ public class CharacterMovement implements KeyListener {
                 stationFound = stations.indexOf(station);
             }
         }
+        for (Rectangle room206Items: room206items){
+            if(student.intersects(room206Items)){
+                isInteracting = true;
+                facing = animation;
+                student.x = oldX;
+                student.y = oldY;
+               // itemfound = room206items.indexOf(room206items);
+                
+            }
+        }
     }
 
     @Override
@@ -158,7 +169,7 @@ public class CharacterMovement implements KeyListener {
         stations.add(soup);
         stations.add(cooler);
     }
-    
+
     public void setRoom(Rectangle shelf, Rectangle longtable, Rectangle shorttable, Rectangle cornertable, Rectangle wallN, Rectangle wallS, Rectangle wallW, Rectangle wallE)
     {
     stations.add(shelf);

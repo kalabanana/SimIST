@@ -43,6 +43,7 @@ import java.awt.event.MouseEvent;
     
 
 public class Room206 extends JPanel {
+
     public static final int ShelfWidth = 80;
     public static final int ShelfHight = 30;
     public static final int LongtableWidth = 309;
@@ -78,7 +79,7 @@ public class Room206 extends JPanel {
         super();
         student = inf_Student;
         characterMovement = inf_charMovement;
-        setSize(642, 514);
+        setSize(514, 642);
         setLayout(null);
         add(temp);
         temp.setBounds(200,200,200,200);
@@ -114,7 +115,7 @@ public class Room206 extends JPanel {
     }
 
     private void placeStations() {
-        student.setBounds(475, 150, student.width, student.height);
+        student.setBounds(300, 150, student.width, student.height);
         shelf.setBounds(383, 128, ShelfWidth, ShelfHight);
         longtable.setBounds(101, 113, LongtableWidth, LongtableHight);
         shorttable.setBounds(286, 258, ShorttableWidth, ShorttableHight);
