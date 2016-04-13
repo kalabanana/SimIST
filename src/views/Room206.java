@@ -43,7 +43,7 @@ import java.awt.event.MouseEvent;
     
 
 public class Room206 extends JPanel {
-    public static final int ShelfWidth = 100;
+    public static final int ShelfWidth = 80;
     public static final int ShelfHight = 30;
     public static final int LongtableWidth = 309;
     public static final int LongtableHight = 40;
@@ -122,7 +122,7 @@ public class Room206 extends JPanel {
         return longtable;
     }
     
-    public Rectangle getCounertable()
+    public Rectangle getCornertable()
     {
         return cornertable;
     }
