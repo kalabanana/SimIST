@@ -47,7 +47,7 @@ public class Room206 extends JPanel {
     public static final int ShelfHight = 30;
     public static final int LongtableWidth = 309;
     public static final int LongtableHight = 40;
-    public static final int ShorttableWidth = 50;
+    public static final int ShorttableWidth = 95;
     public static final int ShorttableHight = 45;
     public static final int CornertableWidth = 114;
     public static final int CornertableHight = 62;
@@ -101,13 +101,33 @@ public class Room206 extends JPanel {
 
     private void placeStations() {
         student.setBounds(475, 150, student.width, student.height);
-        shelf.setBounds(122, 158, ShelfWidth, ShelfHight);
+        shelf.setBounds(383, 128, ShelfWidth, ShelfHight);
         longtable.setBounds(101, 113, LongtableWidth, LongtableHight);
-        shorttable.setBounds(86, 155, ShorttableWidth, ShorttableHight);
+        shorttable.setBounds(286, 258, ShorttableWidth, ShorttableHight);
         cornertable.setBounds(59, 192, CornertableWidth, CornertableHight);
     }
 
-
+    public Rectangle getShelf()
+    {
+        return shelf;
+    }
+    
+    public Rectangle getShorttable()
+    {
+        return shorttable;
+    }
+    
+    public Rectangle getLongtable()
+    {
+        return longtable;
+    }
+    
+    public Rectangle getCounertable()
+    {
+        return cornertable;
+    }
+    
+   
     @Override
     protected void paintComponent(Graphics g) {
 
