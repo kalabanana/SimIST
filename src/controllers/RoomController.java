@@ -32,9 +32,10 @@ public class RoomController {
         TestFrame testFrame = new TestFrame();
         Customer student = new Customer();
         CharacterMovement charMovement = new CharacterMovement(student);
-//        room = new Room206(student, charMovement);
-        //charMovement.setStations(abp.getCounter(), abp.getCoffee(), abp.getSign(), abp.getTrash(), abp.getBakery(), abp.getFruit(), abp.getSoup(), abp.getCooler());
-       // testFrame.add(abp);
+        room = new Room206(student, charMovement);
+        //charMovement.setStations(r(), room.getCoffee(), abp.getSign(), abp.getTrash(), abp.getBakery(), abp.getFruit(), abp.getSoup(), abp.getCooler());
+        testFrame.add(room);
+        testFrame.setSize(514,642);
         
         gameTimer = new Timer(5,new GameTimer());
         gameTimer.start();
@@ -52,12 +53,10 @@ public class RoomController {
     
     class GameTimer implements ActionListener {
 
-    
-
         @Override
         public void actionPerformed(ActionEvent ae) {
             
-            //room.repaint();
+             room.repaint();
                 
             }
         }
