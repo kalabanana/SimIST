@@ -43,31 +43,20 @@ import java.awt.event.MouseEvent;
     
 
 public class Room206 extends JPanel {
-    public static final int COUNTERWIDTH = 160;
-    public static final int COUNTERHEIGHT = 192;
-    public static final int COFFEEWIDTH = 309;
-    public static final int COFFEEHEIGHT = 40;
-    public static final int SIGNWIDTH = 50;
-    public static final int SIGNHEIGHT = 45;
-    public static final int TRASHWIDTH = 114;
-    public static final int TRASHHEIGHT = 62;
-    public static final int BAKERYWIDTH = 50;
-    public static final int BAKERYHEIGHT = 150;
-    public static final int FRUITWIDTH = 75;
-    public static final int FRUITHEIGHT = 65;
-    public static final int SOUPWIDTH = 144;
-    public static final int SOUPHEIGHT = 40;
-    public static final int COOLERWIDTH = 310;
-    public static final int COOLERHEIGHT = 30;
+    public static final int ShelfWidth = 100;
+    public static final int ShelfHight = 30;
+    public static final int LongtableWidth = 309;
+    public static final int LongtableHight = 40;
+    public static final int ShorttableWidth = 50;
+    public static final int ShorttableHight = 45;
+    public static final int CornertableWidth = 114;
+    public static final int CornertableHight = 62;
 
-    private Rectangle counter;
-    private Rectangle coffee;
-    private Rectangle sign;
-    private Rectangle trash;
-    private Rectangle bakery;
-    private Rectangle fruit;
-    private Rectangle soup;
-    private Rectangle cooler;
+
+    private Rectangle shelf;
+    private Rectangle longtable;
+    private Rectangle shorttable;
+    private Rectangle cornertable;
     private Rectangle exitOutside;
     private Rectangle exitCompSci;
     private CharacterMovement characterMovement;
@@ -82,7 +71,7 @@ public class Room206 extends JPanel {
         setSize(642, 514);
         setLayout(null);
         add(temp);
-        temp.setBounds(200, 200, 200, 200);
+        temp.setBounds(200,200,200,200);
         init();
         placeStations();
         this.addKeyListener(characterMovement);
@@ -91,36 +80,31 @@ public class Room206 extends JPanel {
             @Override
             public void mouseMoved(MouseEvent e)
             {
-//                System.out.println(e.getPoint());
+                //System.out.println(e.getPoint());
+           
                 temp.setText(e.getPoint().toString());
+                
             }
         });
         this.setFocusable(true);
     }
 
     private void init() {
-        counter = new Rectangle();
-        coffee = new Rectangle();
-        sign = new Rectangle();
-        trash = new Rectangle();
-        bakery = new Rectangle();
-        fruit = new Rectangle();
-        soup = new Rectangle();
-        cooler = new Rectangle();
+        shelf = new Rectangle();
+        longtable = new Rectangle();
+        shorttable = new Rectangle();
+        cornertable = new Rectangle();
+   
         
         
     }
 
     private void placeStations() {
-        student.setBounds(700, 400, student.width, student.height);
-        counter.setBounds(622, 158, COUNTERWIDTH, COUNTERHEIGHT);
-        coffee.setBounds(201, 513, COFFEEWIDTH, COFFEEHEIGHT);
-        sign.setBounds(86, 355, SIGNWIDTH, SIGNHEIGHT);
-        trash.setBounds(59, 492, TRASHWIDTH, TRASHHEIGHT);
-        bakery.setBounds(5, 132, BAKERYWIDTH, BAKERYHEIGHT);
-        fruit.setBounds(28, 5, FRUITWIDTH, FRUITHEIGHT);
-        soup.setBounds(146, 17, SOUPWIDTH, SOUPHEIGHT);
-        cooler.setBounds(318, 26, COOLERWIDTH, COOLERHEIGHT);
+        student.setBounds(475, 150, student.width, student.height);
+        shelf.setBounds(122, 158, ShelfWidth, ShelfHight);
+        longtable.setBounds(101, 113, LongtableWidth, LongtableHight);
+        shorttable.setBounds(86, 155, ShorttableWidth, ShorttableHight);
+        cornertable.setBounds(59, 192, CornertableWidth, CornertableHight);
     }
 
 

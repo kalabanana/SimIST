@@ -198,7 +198,7 @@ public class AuBonPainPanel extends JPanel {
             @Override
             public void mouseMoved(MouseEvent e)
             {
-//                System.out.println(e.getPoint());
+                //System.out.println(e.getPoint());
                 temp.setText(e.getPoint().toString());
             }
         });
