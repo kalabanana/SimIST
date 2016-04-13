@@ -74,14 +74,21 @@ public class FrameTester {
                     System.err.println(ex);
                 }
             }
-
+            
             if (o == floor) {
-                removeButtons();
-                Floor floorPanel = new Floor("test_floor");
-                frame.getContentPane().add(floorPanel);
-                floorPanel.setFocusable(true);
-                floorPanel.requestFocusInWindow();
-                refreshPane();
+                try {
+                    RoomController r = new RoomController();
+                } catch (Exception ex){
+                    System.err.println(ex);
+                }
+                
+//            if (o == floor) {
+//                removeButtons();
+//                Floor floorPanel = new Floor("test_floor");
+//                frame.getContentPane().add(floorPanel);
+//                floorPanel.setFocusable(true);
+//                floorPanel.requestFocusInWindow();
+//                refreshPane();
             }
         }
     }
