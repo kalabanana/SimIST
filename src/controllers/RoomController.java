@@ -24,7 +24,7 @@ import views.TestFrame;
  * @author qpm5006
  */
 public class RoomController {
-    private Room206 room;
+    private Room206 room206;
     private Timer gameTimer;
     public RoomController() throws Exception
     {
@@ -32,10 +32,10 @@ public class RoomController {
         TestFrame testFrame = new TestFrame();
         Customer student = new Customer();
         CharacterMovement charMovement = new CharacterMovement(student);
-        room = new Room206(student, charMovement);
-        charMovement.setRoom206(room.getCounertable(), room.getLongtable(), room.getShelf(), room.getShorttable());
-        testFrame.add(room);
-        testFrame.setSize(514,642);
+        room206 = new Room206(student, charMovement);
+        charMovement.setRoom206(room206.getCounertable(), room206.getLongtable(), room206.getShelf(), room206.getShorttable());
+        testFrame.add(room206);
+        testFrame.setSize(530,670);
         
         gameTimer = new Timer(5,new GameTimer());
         gameTimer.start();
@@ -56,7 +56,7 @@ public class RoomController {
         @Override
         public void actionPerformed(ActionEvent ae) {
             
-             room.repaint();
+             room206.repaint();
                 
             }
         }
