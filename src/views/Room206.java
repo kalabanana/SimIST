@@ -51,14 +51,24 @@ public class Room206 extends JPanel {
     public static final int ShorttableHight = 45;
     public static final int CornertableWidth = 114;
     public static final int CornertableHight = 62;
+    public static final int WallNWidth = 1;
+    public static final int WallNHight = 1;
+    public static final int WallSWidth= 1;
+    public static final int WallSHight = 1;
+    public static final int WallWWidth = 1;
+    public static final int WallWHight = 1;
+    public static final int WallEWidth = 1;
+    public static final int WallEHight = 1;
 
 
     private Rectangle shelf;
     private Rectangle longtable;
     private Rectangle shorttable;
     private Rectangle cornertable;
-    private Rectangle exitOutside;
-    private Rectangle exitCompSci;
+    private Rectangle wallN;
+    private Rectangle wallS;
+    private Rectangle wallW;
+    private Rectangle wallE;
     private CharacterMovement characterMovement;
     private Customer student;
 
@@ -94,6 +104,10 @@ public class Room206 extends JPanel {
         longtable = new Rectangle();
         shorttable = new Rectangle();
         cornertable = new Rectangle();
+        wallN = new Rectangle();
+        wallS = new Rectangle();
+        wallW = new Rectangle();
+        wallE = new Rectangle();
    
         
         
@@ -105,6 +119,10 @@ public class Room206 extends JPanel {
         longtable.setBounds(101, 113, LongtableWidth, LongtableHight);
         shorttable.setBounds(286, 258, ShorttableWidth, ShorttableHight);
         cornertable.setBounds(59, 192, CornertableWidth, CornertableHight);
+        wallN.setBounds(111,111, WallNWidth, WallNHight);
+        wallS.setBounds(111,111, WallSWidth, WallSHight);
+        wallW.setBounds(111,111, WallWWidth, WallWHight);
+        wallE.setBounds(111,111, WallEWidth, WallEHight);
     }
 
     public Rectangle getShelf()
@@ -123,6 +141,22 @@ public class Room206 extends JPanel {
     }
     
     public Rectangle getCornertable()
+    {
+        return cornertable;
+    }
+     public Rectangle getWallN()
+    {
+        return cornertable;
+    }
+      public Rectangle getWallS()
+    {
+        return cornertable;
+    }
+       public Rectangle getWallW()
+    {
+        return cornertable;
+    }
+        public Rectangle getWallE()
     {
         return cornertable;
     }

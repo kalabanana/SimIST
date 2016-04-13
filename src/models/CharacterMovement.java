@@ -159,12 +159,17 @@ public class CharacterMovement implements KeyListener {
         stations.add(cooler);
     }
     
-    public void setRoom(Rectangle shelf, Rectangle longtable, Rectangle shorttable, Rectangle cornertable)
+    public void setRoom(Rectangle shelf, Rectangle longtable, Rectangle shorttable, Rectangle cornertable, Rectangle wallN, Rectangle wallS, Rectangle wallW, Rectangle wallE)
     {
     stations.add(shelf);
     stations.add(longtable);
     stations.add(shorttable);
     stations.add(cornertable);
+    stations.add(wallN);
+    stations.add(wallS);
+    stations.add(wallW);
+    stations.add(wallE);
+    
     }
 
 }
