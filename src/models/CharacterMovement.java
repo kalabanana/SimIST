@@ -170,7 +170,8 @@ public class CharacterMovement implements KeyListener {
         stations.add(cooler);
     }
     
-    public void setRoom206(Rectangle shelf1,Rectangle shelf2, Rectangle longtable, Rectangle middletable1, Rectangle middletable2, Rectangle middletable3, Rectangle middletable4, Rectangle middletable5, Rectangle middletable6, Rectangle shorttable, Rectangle cornertable1, Rectangle cornertable2, Rectangle cornertable3){
+    public void setRoom206(Rectangle shelf1,Rectangle shelf2, Rectangle longtable, Rectangle middletable1, Rectangle middletable2, Rectangle middletable3, Rectangle middletable4, Rectangle middletable5, Rectangle middletable6, 
+            Rectangle shorttable, Rectangle cornertable1, Rectangle cornertable2, Rectangle key){
         room206items.add(shelf1);
         room206items.add(shelf2);
         room206items.add(longtable);
@@ -183,8 +184,7 @@ public class CharacterMovement implements KeyListener {
         room206items.add(shorttable);
         room206items.add(cornertable1);
         room206items.add(cornertable2);
-        room206items.add(cornertable3);
-  
+        room206items.add(key);  
     }
     public void setWall(Rectangle wallUD1, Rectangle wallUD2, Rectangle wallLR1, Rectangle wallLR2)
     {

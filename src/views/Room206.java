@@ -14,6 +14,7 @@ import models.CharacterMovement;
 import models.Customer;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -59,6 +60,7 @@ public class Room206 extends JPanel {
     
     private CharacterMovement characterMovement;
     private Customer student;
+    private boolean keyfound = false;
 
     private JLabel temp = new JLabel();
     private JLabel msg = new JLabel();
@@ -70,8 +72,9 @@ public class Room206 extends JPanel {
         setSize(537, 670);
         add(temp);
         temp.setBounds(200,200,200,200);
+        msg.setText("Room206 is lock! You need to find the key! Hint: Pointer: 80, 500 ");
         msg.setLocation(200, 500);
-        msg.setText("Room206 is lock! You need to find the key!");
+        
         add(msg);
         init();
         placeStations();
@@ -81,15 +84,25 @@ public class Room206 extends JPanel {
             @Override
             public void mouseMoved(MouseEvent e)
             {
-                //System.out.println(e.getPoint());
            
                 temp.setText(e.getPoint().toString());
-                
+                if(e.getX()==80 && e.getY() == 500){
+                    System.out.println("key");
+                    keyfound = true;
+                    JOptionPane.showMessageDialog(temp,"Key is found,room is now unlocked");
+                    
+                }
             }
         });
+        checkKeyFound();
         this.setFocusable(true);
     }
-
+    private void checkKeyFound(){
+        if(keyfound==true){
+            this.setVisible(false);
+        }
+    }
+    
     private void init() {
         shelf1 = new Rectangle();
         shelf2 = new Rectangle();

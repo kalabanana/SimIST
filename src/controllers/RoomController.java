@@ -34,22 +34,28 @@ public class RoomController {
         Customer student = new Customer();
         CharacterMovement charMovement = new CharacterMovement(student);
         room = new Room206(student, charMovement);
-        charMovement.setRoom206(room.getShelf1(),room.getShelf2(), room.getLongtable(), room.getMiddletable1(),room.getMiddletable2(),room.getMiddletable3(),room.getMiddletable4(),room.getMiddletable5(), room.getMiddletable6(),room.getShorttable(), room.getCornertable1(),room.getCornertable2(),room.getKey());
+        charMovement.setRoom206(room.getShelf1(),room.getShelf2(), room.getLongtable(), 
+                room.getMiddletable1(),room.getMiddletable2(),room.getMiddletable3(),
+                room.getMiddletable4(),room.getMiddletable5(), room.getMiddletable6(),
+                room.getShorttable(), room.getCornertable1(),room.getCornertable2(),room.getKey());
         charMovement.setWall(room.getWallUD1(),room.getWallUD2(), room.getWallLR1(), room.getWallLR2());
         testFrame.add(room);
         testFrame.setSize(530,670);
+        testFrame.setLocationRelativeTo(null);
+        testFrame.setTitle("Room 206");
         
         gameTimer = new Timer(5,new GameTimer());
         gameTimer.start();
-        InputStream is;
+        InputStream music;
         Sequencer sequence;
         sequence = MidiSystem.getSequencer();
         sequence.open();
-        is = new BufferedInputStream(new FileInputStream(new File("beatit.mid")));
-        sequence.setSequence(is);
+        music = new BufferedInputStream(new FileInputStream(new File("Disney_Themes_-_Mickey_Mouse_Club.mid")));
+        sequence.setSequence(music);
         sequence.setLoopCount(Sequencer.LOOP_CONTINUOUSLY);
         sequence.start();
-        is.close();
+        music.close();
+        //http://www.midiworld.com/files/1132/
 
     }
     
