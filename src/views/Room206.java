@@ -25,17 +25,17 @@ import java.awt.event.MouseEvent;
 public class Room206 extends JPanel {
 
     public static final int ShelfWidth = 60;
-    public static final int ShelfHight = 15;
+    public static final int ShelfHeight = 15;
     public static final int LongtableWidth = 175;
     public static final int MiddletableWidth = 90;
     public static final int ShorttableWidth = 18;
-    public static final int TableHight = 10;
+    public static final int TableHeight = 15;
     public static final int CornertableWidth = 30;
-    public static final int CornertableHight = 64;
+    public static final int CornertableHeight = 64;
     public static final int WallUDWidth = 450;
-    public static final int WallUDHight = 45;
+    public static final int WallUDHeight = 45;
     public static final int WallLRWidth= 15;
-    public static final int WallLRHight = 600;
+    public static final int WallLRHeight = 600;
 
 
 
@@ -67,7 +67,7 @@ public class Room206 extends JPanel {
         super();
         student = inf_Student;
         characterMovement = inf_charMovement;
-        setSize(514, 642);
+        setSize(537, 670);
         add(temp);
         temp.setBounds(200,200,200,200);
         msg.setLocation(200, 500);
@@ -83,7 +83,7 @@ public class Room206 extends JPanel {
             {
                 //System.out.println(e.getPoint());
            
-                //temp.setText(e.getPoint().toString());
+                temp.setText(e.getPoint().toString());
                 
             }
         });
@@ -116,23 +116,23 @@ public class Room206 extends JPanel {
 
     private void placeStations() {
         student.setBounds(450, 150, student.width, student.height);
-        shelf1.setBounds(43, 100, ShelfWidth, ShelfHight);
-        shelf2.setBounds(363,100,ShelfWidth, ShelfHight);
-        longtable.setBounds(142, 162, LongtableWidth, TableHight);
-        middletable1.setBounds(266,256,MiddletableWidth, TableHight);
-        middletable2.setBounds(266,256,MiddletableWidth, TableHight);
-        middletable3.setBounds(266,256,MiddletableWidth, TableHight);
-        middletable4.setBounds(266,256,MiddletableWidth, TableHight);
-        middletable5.setBounds(266,256,MiddletableWidth, TableHight);
-        middletable6.setBounds(266,256,MiddletableWidth, TableHight);
-        shorttable.setBounds(436, 449, ShorttableWidth, TableHight);
-        cornertable1.setBounds(29, 334, CornertableWidth, CornertableHight);
-        cornertable2.setBounds(59, 192, CornertableWidth, CornertableHight);
-        key.setBounds(59, 192, CornertableWidth, CornertableHight);
-        wallUD1.setBounds(23,2, WallUDWidth, WallUDHight);
-        wallUD2.setBounds(23, 544, WallUDWidth, WallUDHight);
-        wallLR1.setBounds(0,66, WallLRWidth, WallLRHight);
-        wallLR2.setBounds(458,226, WallLRWidth, WallLRHight);
+        shelf1.setBounds(43, 100, ShelfWidth, ShelfHeight);
+        shelf2.setBounds(363,100,ShelfWidth, ShelfHeight);
+        longtable.setBounds(142, 162, LongtableWidth, TableHeight);
+        middletable1.setBounds(94,256,MiddletableWidth, TableHeight);
+        middletable2.setBounds(266,256,MiddletableWidth, TableHeight);
+        middletable3.setBounds(94,356,MiddletableWidth, TableHeight);
+        middletable4.setBounds(266,356,MiddletableWidth, TableHeight);
+        middletable5.setBounds(94,456,MiddletableWidth, TableHeight);
+        middletable6.setBounds(266,456,MiddletableWidth, TableHeight);
+        shorttable.setBounds(436, 449, ShorttableWidth, TableHeight);
+        cornertable1.setBounds(444, 353, CornertableWidth, CornertableHeight);
+        cornertable2.setBounds(413, 449, CornertableWidth, CornertableHeight);
+        key.setBounds(29, 353, CornertableWidth, CornertableHeight);
+        wallUD1.setBounds(23,2, WallUDWidth, WallUDHeight);
+        wallUD2.setBounds(23, 544, WallUDWidth, WallUDHeight);
+        wallLR1.setBounds(0,66, WallLRWidth, WallLRHeight);
+        wallLR2.setBounds(458,226, WallLRWidth, WallLRHeight);
    
     }
 
