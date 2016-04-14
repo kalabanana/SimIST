@@ -23,23 +23,29 @@ import java.awt.event.MouseEvent;
     
 
 public class Room206 extends JPanel {
-    
-    public static final int ShelfWidth = 100;
-    public static final int ShelfHight = 30;
-    public static final int LongtableWidth = 309;
-    public static final int LongtableHight = 40;
+
+    public static final int ShelfWidth = 64;
+    public static final int ShelfHight = 32;
+    public static final int LongtableWidth = 160;
+    public static final int MiddletableWidth = 160;
     public static final int ShorttableWidth = 95;
-    public static final int ShorttableHight = 45;
+    public static final int tableHight = 40;
     public static final int CornertableWidth = 114;
     public static final int CornertableHight = 62;
+    public static final int WallUDWidth = 1;
+    public static final int WallUDHight = 1;
+    public static final int WallLRWidth= 1;
+    public static final int WallLRHight = 1;
+
 
 
     private Rectangle shelf;
     private Rectangle longtable;
+    private Rectangle middletable;
     private Rectangle shorttable;
     private Rectangle cornertable;
-    private Rectangle exitOutside;
-    private Rectangle exitCompSci;
+    private Rectangle wallUD;
+    private Rectangle wallLR;
     private CharacterMovement characterMovement;
     private Customer student;
 
@@ -76,19 +82,27 @@ public class Room206 extends JPanel {
     private void init() {
         shelf = new Rectangle();
         longtable = new Rectangle();
+        middletable = new Rectangle();
         shorttable = new Rectangle();
         cornertable = new Rectangle();
+        wallUD = new Rectangle();
+        wallLR = new Rectangle();
+
    
         
         
     }
 
     private void placeStations() {
-        student.setBounds(300, 150, student.width, student.height);
+        student.setBounds(470, 155, student.width, student.height);
         shelf.setBounds(383, 128, ShelfWidth, ShelfHight);
-        longtable.setBounds(101, 113, LongtableWidth, LongtableHight);
-        shorttable.setBounds(286, 258, ShorttableWidth, ShorttableHight);
+        longtable.setBounds(101, 113, LongtableWidth, tableHight);
+        middletable.setBounds(11,11,MiddletableWidth, tableHight);
+        shorttable.setBounds(286, 258, ShorttableWidth, tableHight);
         cornertable.setBounds(59, 192, CornertableWidth, CornertableHight);
+        wallUD.setBounds(111,111, WallUDWidth, WallUDHight);
+        wallLR.setBounds(111,111, WallLRWidth, WallLRHight);
+   
     }
 
     public Rectangle getShelf()
@@ -106,10 +120,23 @@ public class Room206 extends JPanel {
         return longtable;
     }
     
-    public Rectangle getCounertable()
+    public Rectangle getMiddletable()
+    {
+        return middletable;
+    }
+    public Rectangle getCornertable()
     {
         return cornertable;
     }
+     public Rectangle getWallUD()
+    {
+        return wallUD;
+    }
+      public Rectangle getWallLR()
+    {
+        return wallLR;
+    }
+
     
    
     @Override

@@ -33,7 +33,7 @@ public class RoomController {
         Customer student = new Customer();
         CharacterMovement charMovement = new CharacterMovement(student);
         room206 = new Room206(student, charMovement);
-        charMovement.setRoom206(room206.getCounertable(), room206.getLongtable(), room206.getShelf(), room206.getShorttable());
+        charMovement.setRoom206(room206.getShelf(), room206.getShorttable(),room206.getLongtable(),room206.getMiddletable(),room206.getCornertable(),room206.getWallUD(),room206.getWallLR());
         testFrame.add(room206);
         testFrame.setSize(530,670);
         
