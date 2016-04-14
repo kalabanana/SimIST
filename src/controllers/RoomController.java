@@ -24,15 +24,16 @@ import views.TestFrame;
  * @author qpm5006
  */
 public class RoomController {
-    private Room206 room206;
+    private Room206 room;
     private Timer gameTimer;
+    
     public RoomController() throws Exception
     {
         
         TestFrame testFrame = new TestFrame();
         Customer student = new Customer();
         CharacterMovement charMovement = new CharacterMovement(student);
-        Room206 room = new Room206(student, charMovement);
+        room = new Room206(student, charMovement);
         charMovement.setRoom206(room.getShelf1(),room.getShelf2(), room.getLongtable(), room.getMiddletable1(),room.getMiddletable2(),room.getMiddletable3(),room.getMiddletable4(),room.getMiddletable5(), room.getMiddletable6(),room.getShorttable(), room.getCornertable1(),room.getCornertable2(),room.getKey());
         charMovement.setWall(room.getWallUD1(),room.getWallUD2(), room.getWallLR1(), room.getWallLR2());
         testFrame.add(room);
@@ -57,7 +58,7 @@ public class RoomController {
         @Override
         public void actionPerformed(ActionEvent ae) {
             
-             room206.repaint();
+             room.repaint();
                 
             }
         }
