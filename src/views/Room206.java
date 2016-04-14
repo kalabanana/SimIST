@@ -44,28 +44,39 @@ import java.awt.event.MouseEvent;
 
 public class Room206 extends JPanel {
 
-    public static final int ShelfWidth = 64;
-    public static final int ShelfHight = 32;
-    public static final int LongtableWidth = 160;
-    public static final int MiddletableWidth = 160;
-    public static final int ShorttableWidth = 95;
-    public static final int tableHight = 40;
-    public static final int CornertableWidth = 114;
-    public static final int CornertableHight = 62;
-    public static final int WallUDWidth = 1;
-    public static final int WallUDHight = 1;
-    public static final int WallLRWidth= 1;
-    public static final int WallLRHight = 1;
+    public static final int ShelfWidth = 60;
+    public static final int ShelfHight = 15;
+    public static final int LongtableWidth = 175;
+    public static final int MiddletableWidth = 90;
+    public static final int ShorttableWidth = 18;
+    public static final int TableHight = 10;
+    public static final int CornertableWidth = 30;
+    public static final int CornertableHight = 64;
+    public static final int WallUDWidth = 450;
+    public static final int WallUDHight = 45;
+    public static final int WallLRWidth= 15;
+    public static final int WallLRHight = 600;
 
 
 
-    private Rectangle shelf;
+    private Rectangle shelf1;
+    private Rectangle shelf2;
     private Rectangle longtable;
-    private Rectangle middletable;
+    private Rectangle middletable1;
+    private Rectangle middletable2;
+    private Rectangle middletable3;
+    private Rectangle middletable4;
+    private Rectangle middletable5;
+    private Rectangle middletable6;
     private Rectangle shorttable;
-    private Rectangle cornertable;
-    private Rectangle wallUD;
-    private Rectangle wallLR;
+    private Rectangle cornertable1;
+    private Rectangle cornertable2;
+    private Rectangle key;
+    private Rectangle wallUD1;
+    private Rectangle wallUD2;
+    private Rectangle wallLR1;
+    private Rectangle wallLR2;
+    
     private CharacterMovement characterMovement;
     private Customer student;
 
@@ -97,13 +108,23 @@ public class Room206 extends JPanel {
     }
 
     private void init() {
-        shelf = new Rectangle();
+        shelf1 = new Rectangle();
+        shelf2 = new Rectangle();
         longtable = new Rectangle();
-        middletable = new Rectangle();
+        middletable1 = new Rectangle();
+        middletable2 = new Rectangle();
+        middletable3 = new Rectangle();
+        middletable4 = new Rectangle();
+        middletable5 = new Rectangle();
+        middletable6 = new Rectangle();
         shorttable = new Rectangle();
-        cornertable = new Rectangle();
-        wallUD = new Rectangle();
-        wallLR = new Rectangle();
+        cornertable1 = new Rectangle();
+        cornertable2 = new Rectangle();
+        key = new Rectangle();
+        wallUD1 = new Rectangle();
+        wallUD2 = new Rectangle();
+        wallLR1 = new Rectangle();
+        wallLR2 = new Rectangle();
 
    
         
@@ -111,20 +132,34 @@ public class Room206 extends JPanel {
     }
 
     private void placeStations() {
-        student.setBounds(470, 155, student.width, student.height);
-        shelf.setBounds(383, 128, ShelfWidth, ShelfHight);
-        longtable.setBounds(101, 113, LongtableWidth, tableHight);
-        middletable.setBounds(11,11,MiddletableWidth, tableHight);
-        shorttable.setBounds(286, 258, ShorttableWidth, tableHight);
-        cornertable.setBounds(59, 192, CornertableWidth, CornertableHight);
-        wallUD.setBounds(111,111, WallUDWidth, WallUDHight);
-        wallLR.setBounds(111,111, WallLRWidth, WallLRHight);
+        student.setBounds(450, 150, student.width, student.height);
+        shelf1.setBounds(43, 100, ShelfWidth, ShelfHight);
+        shelf2.setBounds(363,100,ShelfWidth, ShelfHight);
+        longtable.setBounds(142, 162, LongtableWidth, TableHight);
+        middletable1.setBounds(266,256,MiddletableWidth, TableHight);
+        middletable2.setBounds(266,256,MiddletableWidth, TableHight);
+        middletable3.setBounds(266,256,MiddletableWidth, TableHight);
+        middletable4.setBounds(266,256,MiddletableWidth, TableHight);
+        middletable5.setBounds(266,256,MiddletableWidth, TableHight);
+        middletable6.setBounds(266,256,MiddletableWidth, TableHight);
+        shorttable.setBounds(436, 449, ShorttableWidth, TableHight);
+        cornertable1.setBounds(29, 334, CornertableWidth, CornertableHight);
+        cornertable2.setBounds(59, 192, CornertableWidth, CornertableHight);
+        key.setBounds(59, 192, CornertableWidth, CornertableHight);
+        wallUD1.setBounds(23,2, WallUDWidth, WallUDHight);
+        wallUD2.setBounds(23, 544, WallUDWidth, WallUDHight);
+        wallLR1.setBounds(0,66, WallLRWidth, WallLRHight);
+        wallLR2.setBounds(458,226, WallLRWidth, WallLRHight);
    
     }
 
-    public Rectangle getShelf()
+    public Rectangle getShelf1()
     {
-        return shelf;
+        return shelf1;
+    }
+    public Rectangle getShelf2()
+    {
+        return shelf2;
     }
     
     public Rectangle getShorttable()
@@ -137,21 +172,57 @@ public class Room206 extends JPanel {
         return longtable;
     }
     
-    public Rectangle getMiddletable()
+    public Rectangle getMiddletable1()
     {
-        return middletable;
+        return middletable1;
     }
-    public Rectangle getCornertable()
+    public Rectangle getMiddletable2()
     {
-        return cornertable;
+        return middletable2;
     }
-     public Rectangle getWallUD()
+    public Rectangle getMiddletable3()
     {
-        return wallUD;
+        return middletable3;
     }
-      public Rectangle getWallLR()
+    public Rectangle getMiddletable4()
     {
-        return wallLR;
+        return middletable4;
+    }
+    public Rectangle getMiddletable5()
+    {
+        return middletable5;
+    }
+    public Rectangle getMiddletable6()
+    {
+        return middletable6;
+    }
+    public Rectangle getCornertable1()
+    {
+        return cornertable1;
+    }
+     public Rectangle getCornertable2()
+    {
+        return cornertable2;
+    }
+      public Rectangle getKey()
+    {
+        return key;
+    }
+     public Rectangle getWallUD1()
+    {
+        return wallUD1;
+    }
+       public Rectangle getWallUD2()
+    {
+        return wallUD2;
+    }
+      public Rectangle getWallLR1()
+    {
+        return wallLR1;
+    }
+        public Rectangle getWallLR2()
+    {
+        return wallLR2;
     }
 
     

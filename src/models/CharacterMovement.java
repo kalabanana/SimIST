@@ -170,17 +170,30 @@ public class CharacterMovement implements KeyListener {
         stations.add(cooler);
     }
     
-    public void setRoom206(Rectangle shelf, Rectangle longtable, Rectangle middletable, Rectangle shorttable, Rectangle cornertable, Rectangle wallUD, Rectangle wallLR ){
-        room206items.add(shelf);
+    public void setRoom206(Rectangle shelf1,Rectangle shelf2, Rectangle longtable, Rectangle middletable1, Rectangle middletable2, Rectangle middletable3, Rectangle middletable4, Rectangle middletable5, Rectangle middletable6, Rectangle shorttable, Rectangle cornertable1, Rectangle cornertable2, Rectangle cornertable3){
+        room206items.add(shelf1);
+        room206items.add(shelf2);
         room206items.add(longtable);
-        room206items.add(middletable);
+        room206items.add(middletable1);
+        room206items.add(middletable2);
+        room206items.add(middletable3);
+        room206items.add(middletable4);
+        room206items.add(middletable5);
+        room206items.add(middletable6);
         room206items.add(shorttable);
-        room206items.add(cornertable);
-        room206items.add(wallUD);
-        room206items.add(wallLR);
+        room206items.add(cornertable1);
+        room206items.add(cornertable2);
+        room206items.add(cornertable3);
+  
         
     }
-
+    public void setWall(Rectangle wallUD1, Rectangle wallUD2, Rectangle wallLR1, Rectangle wallLR2)
+    {
+        room206items.add(wallUD1);
+        room206items.add(wallUD2);
+        room206items.add(wallLR1);
+        room206items.add(wallLR2); 
+    }
     
 
 }
