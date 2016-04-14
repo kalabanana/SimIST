@@ -5,33 +5,13 @@
  */
 package views;
 
-import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Image;
 import java.awt.Rectangle;
-import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Stack;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import models.CharacterMovement;
 import models.Customer;
-import controllers.RoomController;
-import models.*;
-import javax.swing.*;
-import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -81,15 +61,18 @@ public class Room206 extends JPanel {
     private Customer student;
 
     private JLabel temp = new JLabel();
+    private JLabel msg = new JLabel();
 
     public Room206(Customer inf_Student, CharacterMovement inf_charMovement) {
         super();
         student = inf_Student;
         characterMovement = inf_charMovement;
         setSize(514, 642);
-        setLayout(null);
         add(temp);
         temp.setBounds(200,200,200,200);
+        msg.setLocation(200, 500);
+        msg.setText("Room206 is lock! You need to find the key!");
+        add(msg);
         init();
         placeStations();
         this.addKeyListener(characterMovement);
@@ -100,7 +83,7 @@ public class Room206 extends JPanel {
             {
                 //System.out.println(e.getPoint());
            
-                temp.setText(e.getPoint().toString());
+                //temp.setText(e.getPoint().toString());
                 
             }
         });

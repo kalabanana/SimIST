@@ -68,12 +68,18 @@ public class Floor extends JPanel implements ActionListener, KeyListener {
        
        for(int i = 0; i<rooms.size();i++){
           if(player1.intersects(rooms.get(i))){
-              if (JOptionPane.showConfirmDialog(null,"enter?","No",
+              if (JOptionPane.showConfirmDialog(null,"Do you want to enter Room206?","Entering 206",
                       JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+                  System.out.println("print");
                   this.setVisible(false);
+                  try {
+                    RoomController r = new RoomController();
+                } catch (Exception ex){
+                    System.err.println(ex);
+                }
               }
               else{
-                  System.exit(0);
+                  
               }
        }
    }

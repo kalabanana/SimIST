@@ -185,7 +185,6 @@ public class CharacterMovement implements KeyListener {
         room206items.add(cornertable2);
         room206items.add(cornertable3);
   
-        
     }
     public void setWall(Rectangle wallUD1, Rectangle wallUD2, Rectangle wallLR1, Rectangle wallLR2)
     {
