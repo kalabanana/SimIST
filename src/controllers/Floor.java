@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import views.*;
 
 public class Floor {
+    //
 
     protected ArrayList<Unit> unitList = new ArrayList<Unit>();
 
