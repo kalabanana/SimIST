@@ -2,6 +2,7 @@
 package sandbox;
 
 import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.net.*;
 import java.io.*;
 import java.util.*;
@@ -39,12 +40,15 @@ public class Weather {
     private int temp;
     
     public Weather () throws Exception{
-        wframe = new WeatherFrame();
-        wframe.setLocationRelativeTo(null);
-        wframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        weatherList();
-        setup();
-        refreshPane();
+      wframe = new WeatherFrame();         
+      Dimension screenSize = new Dimension(Toolkit.getDefaultToolkit().getScreenSize());         
+      int wdwLeft = 385 + screenSize.width / 2;        
+      int wdwTop = screenSize.height / 2 - 322;         
+      wframe.setLocation(wdwLeft,wdwTop);         
+      wframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);         
+      weatherList();         
+      setup();         
+      refreshPane();
 
     }
     public Weather(JPanel panel){
