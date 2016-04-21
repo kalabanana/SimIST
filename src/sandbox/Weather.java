@@ -147,8 +147,10 @@ public class Weather {
         else{
          weatherIcon.setText("ERROR");
         }
-        tempLable.setText(temp + "°F"); 
         
+        tempLable.setSize(330,330);
+        tempLable.setLocation(150, 30);
+        tempLable.setText(temp + "°F"); 
         }
 
 }
