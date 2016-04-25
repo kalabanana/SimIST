@@ -272,6 +272,40 @@ public class GameRoomController {
                 }
 
             }
+            else if(room instanceof Room206){
+                if (ke.getKeyCode() == KeyEvent.VK_SPACE && charMovement.getIsInteracting()) {
+                    switch (charMovement.getStationNumber()) {
+
+                    case 0:
+                    case 1:
+                        System.out.println("Shelf");
+
+                        break;
+                    case 2:
+                        System.out.println("Longtable");
+                        break;
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7:
+                    case 8:
+                        System.out.println("Middletable");
+                        break;
+                    case 9:
+                        System.out.println("Shorttable");
+                        break;
+                    case 10:
+                    case 11:
+                        System.out.println("Cornertable");
+                        break;
+                    case 12:
+                        System.out.println("KEYYYYYYY");
+                        JOptionPane.showMessageDialog(room, "You found the key");
+                        break;
+                    }
+                }
+            }
 
         }
 
