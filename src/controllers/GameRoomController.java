@@ -323,6 +323,7 @@ public class GameRoomController {
                         if(numKey == 1){
                             System.out.println("KEYYYYYYY");
                             JOptionPane.showMessageDialog(room, "You found the key");
+                            student.getInventory().addItem(new StoreObjects("Room 206 Key",0.0f,1,"key.png"),1);
                         }
                         else{
                             System.out.println("No more keys");
