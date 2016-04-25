@@ -235,6 +235,7 @@ public class GameRoomController {
     
      */
     public class InteractKeyListener implements KeyListener {
+        int numKey = 0;
 
         @Override
         public void keyTyped(KeyEvent ke) {
@@ -318,8 +319,14 @@ public class GameRoomController {
                         System.out.println("Cornertable");
                         break;
                     case 12:
-                        System.out.println("KEYYYYYYY");
-                        JOptionPane.showMessageDialog(room, "You found the key");
+                        numKey++;
+                        if(numKey == 1){
+                            System.out.println("KEYYYYYYY");
+                            JOptionPane.showMessageDialog(room, "You found the key");
+                        }
+                        else{
+                            System.out.println("No more keys");
+                        }
                         break;
                     }
                 }
