@@ -18,6 +18,9 @@ import models.*;
 import javax.swing.Timer;
 import java.awt.*;
 import java.awt.event.ComponentEvent;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 
 /**
@@ -58,7 +61,7 @@ public class GameRoomController {
         signObject.changeCost((float) (signObject.getCost() * .85));
  
         addKeyListeners();
-
+        buttonSound();
         InputStream is;
         sequence = MidiSystem.getSequencer();
         sequence.open();
@@ -68,6 +71,21 @@ public class GameRoomController {
         sequence.start();
         is.close();
 
+    }
+    
+   public void buttonSound(){
+      //Reference: http://stackoverflow.com/questions/10570537/java-no-sound-played-for-button
+      try{
+          AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\close.wav"));
+          //R: http://opengameart.org/content/forward-button-press-ui-sound
+          Clip clip = AudioSystem.getClip( );
+            clip.open(audioInputStream);
+            clip.start( );
+        }
+        catch(Exception e)
+        {
+            System.out.println("Error with playing sound.");
+        }
     }
 
     private void addKeyListeners() {

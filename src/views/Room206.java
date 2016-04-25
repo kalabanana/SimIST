@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- *lol
+ *
  * @author qpm5006
  */
 //public final class Room206 extends JPanel implements KeyListener{
