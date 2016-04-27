@@ -61,7 +61,7 @@ public class GameRoomController {
         signObject.changeCost((float) (signObject.getCost() * .85));
  
         addKeyListeners();
-        buttonSound();
+        doorSound();
         InputStream is;
         sequence = MidiSystem.getSequencer();
         sequence.open();
@@ -73,11 +73,10 @@ public class GameRoomController {
 
     }
     
-   public void buttonSound(){
-      //Reference: http://stackoverflow.com/questions/10570537/java-no-sound-played-for-button
+   public void doorSound(){
+       //https://www.freesoundeffects.com/free-sounds/doors-10030/
       try{
           AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("src\\music\\close.wav"));
-          //R: http://opengameart.org/content/forward-button-press-ui-sound
           Clip clip = AudioSystem.getClip( );
             clip.open(audioInputStream);
             clip.start( );

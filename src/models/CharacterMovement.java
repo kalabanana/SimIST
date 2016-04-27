@@ -8,6 +8,10 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import views.Inventory;
 import java.awt.event.KeyListener;
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import views.GameRoom;
 
 public class CharacterMovement implements KeyListener {
@@ -59,6 +63,7 @@ public class CharacterMovement implements KeyListener {
                     frame = 0;
                 }
                 mStudent.x = mStudent.x + (int) tempLeftRight;
+                walking();
                 break;
             case KeyEvent.VK_LEFT:
             case KeyEvent.VK_A:
@@ -72,6 +77,7 @@ public class CharacterMovement implements KeyListener {
                     frame = 0;
                 }
                 mStudent.x = mStudent.x - (int) tempLeftRight;
+                walking();
                 break;
             case KeyEvent.VK_UP:
             case KeyEvent.VK_W:
@@ -85,6 +91,7 @@ public class CharacterMovement implements KeyListener {
                     frame = 0;
                 }
                 mStudent.y = mStudent.y - (int) tempUpDown;
+                walking();
                 break;
             case KeyEvent.VK_DOWN:
             case KeyEvent.VK_S:
@@ -98,6 +105,7 @@ public class CharacterMovement implements KeyListener {
                     frame = 0;
                 }
                 mStudent.y = mStudent.y + (int) tempUpDown;
+                walking();
                 break;
             default:
                 break;
@@ -131,6 +139,18 @@ public class CharacterMovement implements KeyListener {
     @Override
     public void keyReleased(KeyEvent ke) {
 
+    }
+    public void walking(){
+        try{
+          AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("footstep.wav"));
+          Clip clip = AudioSystem.getClip( );
+            clip.open(audioInputStream);
+            clip.start( );
+        }
+        catch(Exception e)
+        {
+            System.out.println("Error with playing sound.");
+        }
     }
 
 
