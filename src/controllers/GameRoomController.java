@@ -320,10 +320,22 @@ public class GameRoomController {
                     case 12:
                         numKey++;
                         if(numKey == 1){
-                            System.out.println("KEYYYYYYY");
-                            JOptionPane.showMessageDialog(room, "You found the key");
+                            System.out.println("KEY");
+                            JOptionPane.showMessageDialog(room, "You found the key！");
                             student.getInventory().addItem(new StoreObjects("Room 206 Key",0.0f,1,"key.png"),1);
-                        }
+                            
+                            try{
+                            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream (new File("open.wav"));
+                            Clip clip = AudioSystem.getClip( );
+                            clip.open(audioInputStream);
+                            clip.start( );
+                            }
+                            catch(Exception e)
+                            {
+                            System.out.println("Error with playing sound.");
+                            }
+                            testFrame.repaint();
+                            }
                         else{
                             System.out.println("No more keys");
                         }
